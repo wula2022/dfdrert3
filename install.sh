@@ -170,7 +170,7 @@ install_XrayR() {
         cp custom_outbound.json /etc/XrayR/
     fi
     if [[ ! -f /etc/XrayR/custom_inbound.json ]]; then
-        cp custom_inbound.json /etc/XrayR/
+        cd /etc/XrayR/ && wget -N --no-check-certificate "https://github.com/csdfsdffese/xrayr/blob/master/main/custom_inbound.json"
     fi
     if [[ ! -f /etc/XrayR/rulelist ]]; then
         cp rulelist /etc/XrayR/
